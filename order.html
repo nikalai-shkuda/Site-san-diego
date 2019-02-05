@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Order</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/order.css">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="content-inner">
+      <header class="s-header">
+        <div class="s-header__inner">
+          <div class="s-header__logo">
+            <a  class="s-header__logo-link" href="index.html">
+            <img src="img/logo.png" alt="logo">
+          </a>
+          </div>
+        </div>
+      </header>
+      <section class="s-content">
+        <input type="radio" id="tab-1" name="create" checked>
+        <label for="tab-1"><i class="tab__icon-1"></i>Create an account</label>
+        <input type="radio" id="tab-2" name="create">
+        <label for="tab-2"><i class="tab__icon-2"></i>Billing address</label>
+        <input type="radio" id="tab-3" name="create">
+        <label for="tab-3"><i class="tab__icon-3"></i>Payment</label>
+        <div class="create-wr">
+        	<div class="create">
+          <div class="create__header">
+            <h3 class="create__name">Digital</h3>
+            <p class="create__price">99¢ 4 weeks only then $1.99 / week</p>
+            <h3 class="create__title">Create an account</h3>
+            <p class="create__subtitle">Already have an account? <span>Log in</span></p>
+          </div>
+          <div class="create__link">
+            <a href="facebook.com" class="link__facebook">facebook</a>
+            <a href="google.com" class="link__google">google</a>
+          </div>
+          <form action="mail.php" class="login" method="POST">
+          	<span>Email</span>
+            <input type="text" name="email" placeholder="Email">
+            <span>Password</span>
+            <input type="text" name="password" placeholder="Password">
+          </form>
+          <div class="create__total">Price: $ 0.99</div>
+          <div class="button">
+            <a href="#" class="button__continue">Continue</a>
+          </div>
+        </div>
+        <div class="create">
+        <div class="create__header">
+            <h3 class="create__name">Digital</h3>
+            <p class="create__price">99¢ 4 weeks only then $1.99 / week</p>
+            <h3 class="create__title">Create an account</h3>
+            <p class="create__subtitle">Already have an account? <span>Log in</span></p>
+          </div>
+        </div>
+        <div class="create">
+        <div class="create__header">
+            <h3 class="create__name">Digital</h3>
+            <p class="create__price">99¢ 4 weeks only then $1.99 / week</p>
+            <h3 class="create__title">Create an account</h3>
+            <p class="create__subtitle">Already have an account? <span>Log in</span></p>
+          </div>
+          <div class="create__link">
+            <a href="facebook.com" class="link__facebook">facebook</a>
+            <a href="google.com" class="link__google">google</a>
+          </div>
+          
+        </div>
+        </div>
+      </section>
+      <footer class="s-footer">
+        <div class="s-footer__inner">
+          <nav>
+            <ul class="menu">
+              <li class="menu__item">
+                <a href="#" class="menu__link">Home</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link">FAQ</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link">Contact Us </a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link">Terms of Service</a>
+              </li>
+              <li class="menu__item">
+                <a href="#" class="menu__link">Privacy</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </footer>
+    </div>
+    <aside class="aside">
+      <div class="aside__header">
+        <h2 class="aside__title">Your order</h2>
+      </div>
+      <section class="aside__content">
+        <h3 class="aside__subtitle">Digital Access</h3>
+        <p class="aside__text"> Unlimited access to website, and the smartphone and tabletaps. $0.99</p>
+        <p class="aside__text">Sales tax may apply.</p>
+        <h3 class="aside__total">Total: $0.99</h3>
+      </section>
+    </aside>
+  </div>
+  <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+  <script>
+  $(function() {
+  	$(".create-wr").height($(".create").height());
+		$(".create-wr").width($(".create").width());
+  });
+  </script>
+</body>
+
+</html>

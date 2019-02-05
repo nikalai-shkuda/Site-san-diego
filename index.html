@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>San Diego</title>
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="slick/slick.css">
+	<link rel="stylesheet" href="slick/slick-theme.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+	<div class="wrapper" >
+		<header class="s-header">
+			<div class="s-header__inner">
+				<a href="#" class="s-header__back">Back</a>
+				<a  class="s-header__logo" href="index.html">
+						<img src="img/logo.png" alt="logo">
+				</a>
+				<a class="s-header__sign" href="#">Sign in</a>
+			</div>
+		</header>
+		<section class="js-product s-product" v-cloak>
+			<div class="container">
+				<div class="s-product__news">
+					<h1 class="s-product__title">{{title}}</h1>
+					<p class="s-product__subtitle">{{subTitle}}</p>
+				</div>
+				<ul class="l-product">
+					<li class="l-product__item" v-for="(tile,index) in tiles" :key="index">
+						<div class="l-product__pic">
+							<img :src="`${tile.image}`" alt="tile.title">
+						</div>
+							<div class="l-product__title">
+								<h2>{{tile.title}}</h2>
+							</div>
+							<div class="l-product__price">
+								<span>{{tile.price}}</span>
+								{{tile.text}}
+							</div>
+							<div class="l-product__link">
+								<a href="order.html" class="btn-start">{{tile.btnStart}}</a>
+							</div>
+							<ul class="l-advantage">
+								<li class="l-advantage__item" v-for="tag in tile.advantage">{{tag}}</li>
+							</ul>
+							<div class="l-product__details">
+								<a href="#" class="btn-details">{{tile.btnDetails}}</a>
+							</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section class="js-offer s-offer">
+			<div class="container">
+				<div class="s-offer__header">
+					<h2 class="s-offer__name">{{title}}</h2>
+				</div>
+				<ul class="l-offer">
+					<li class="l-offer__item" v-for="(tile,index) in tiles" :key="index">
+						<div class="l-offer__name">{{tile.title}}</div>
+						<div class="l-offer__price">{{tile.price}}</div>
+						<div class="l-offer__link">
+							<a href="#" class="btn-start">{{tile.btnStart}}</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			</section>
+			<section class="js-benefits s-benefits">
+				<div class="container">
+					<div class="s-benefits__header">
+						<h2 class="s-benefits__name">{{title}}</h2>
+					</div>
+					<ul class="l-benefits">
+						<li class="l-benefits__item" v-for="(tile, index) in tiles" :key="index">
+							<div class="l-benefits__title">{{tile.title}}</div>
+							<div class="l-benefits__info">{{tile.info}}</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section>
+				<div class="s-slider">
+					<ul class="slider">
+						<li class="slider__item">
+							<img class="slider__img" src="img/slider.jpg" alt="slider photo-1">
+							<div class="slider__decription">
+								<p>Special</p>
+								<h3 class="slider__title">Life & Style and Travel sections</h3>
+							</div>
+						</li>
+						<li class="slider__item"><img class="slider__img" src="img/slider.jpg" alt="slider photo-2"></li>
+						<li class="slider__item"><img class="slider__img" src="img/slider.jpg" alt="slider photo-3"></li>
+						<li class="slider__item"><img class="slider__img" src="img/slider.jpg" alt="slider photo-4"></li>
+					</ul>
+				</div>
+			</section>
+			<section class="s-more">
+				<div class="container">
+					<div class="s-more__inner">
+						<div class="s-more__header">
+							<h2 class="s-more__name">Place some text here</h2>
+						</div>
+						<div class="s-more__text">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel vero, quis sint nesciunt alias minus tempore libero aut, corporis quasi quae cumque! Praesentium animi sit sint non quibusdam, corporis, nesciunt error. Deserunt eius qui, harum architecto corporis incidunt tenetur aut repellendus doloribus est, doloremque facere iste at, minima veritatis quibusdam.</p>
+						</div>
+						<div class="s-more__link">
+							<a href="#" class="btn-more">More</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<footer class="js-footer s-footer">
+				<div class="s-footer__inner">
+					<div class="s-footer__date">
+						<span>{{date}}</span>
+					</div>
+					<nav>
+						<ul class="menu">
+							<li class="menu__item" v-for="link in links">
+								<a href="#" class="menu__link">{{link}}</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</footer>
+	</div>	
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="slick/slick.min.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			$('.slider').slick({
+				dots: true
+			});
+		});
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="js/index.js"></script>
+</body>
+</html>
